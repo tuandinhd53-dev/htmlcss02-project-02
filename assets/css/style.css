@@ -27,6 +27,38 @@ a {
     text-decoration: none;
 }
 
+.heading {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -1.16px;
+}
+
+.heading.lv1 {
+    line-height: 1.17;
+    font-size: 5.8rem;
+}
+
+.heading.lv2 {
+    line-height: 1.27;
+    font-size: 3.8rem;
+}
+
+.desc {
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67; /* 185.714% */
+}
+
+.desc.lv1 {
+    font-size: 1.6rem;
+}
+
+.desc.lv2 {
+    font-size: 1.4rem;
+}
+
 .btn {
     display: inline-block;
     color: #fff;
@@ -41,6 +73,18 @@ a {
 }
 .btn:hover {
     opacity: 0.9;
+    cursor: pointer;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
 }
 /* header */
 
@@ -106,7 +150,7 @@ a {
 
 /* <!-- Hero --> */
 .hero {
-    padding-top: 56px;
+    padding: 56px 0 65px;
     background: #fffcf4;
 }
 
@@ -190,21 +234,12 @@ a {
     padding: 64px 0 0 130px;
 }
 
-.hero .heading {
-    color: #171100;
-    font-family: var(--font-heading);
-    font-size: 5.8rem;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: -1.16px;
-}
-
 .hero .desc {
     color: #5f5b53;
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.67;
-    margin: 48px 0 22px;
+    margin: 22px 0 38px;
 }
 
 .hero .cta-group {
@@ -247,6 +282,18 @@ a {
     margin-left: 14px;
 }
 
+.desc-recent {
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67; /* 166.667% */
+    margin-top: 48px;
+}
+
+.hero .stats {
+    margin-top: 8px;
+}
+
 .hero .stats strong {
     color: #171100;
     font-family: var(--font-heading);
@@ -258,4 +305,281 @@ a {
 
 .hero .stats strong:last-child {
     margin-left: 28px;
+}
+
+/* <!-- popular --> */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular-top .desc {
+    color: #5f5b53;
+    width: 458px;
+    margin-top: 16px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
+.popular-top .controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.popular-top .control-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background: transparent;
+}
+
+.popular-top .control-btn:hover {
+    color: #fff;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+.popular-top .control-btn:last-child {
+    transform: rotate(180deg);
+}
+
+.course-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.course-list .course-item {
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid #e2dfda;
+    background: #fff;
+}
+
+.course-list .course-item:hover {
+    border-color: transparent;
+    box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+}
+
+.course-list .course-item .thumb {
+    width: calc(100% + 2px);
+    margin: -1px;
+    object-fit: cover;
+    height: 278px;
+    border-radius: 12px 12px 0 0;
+}
+
+.course-list .info {
+    padding: 16px 22px 22px;
+}
+
+.course-list .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.course-list .head .title a {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-list .head img {
+    width: 18px;
+    height: 18px;
+}
+
+.course-list .head span {
+    color: #fea31b;
+    margin-left: 6px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.course-list .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.course-list .foot .price {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.course-list .foot .btn {
+    border: none;
+}
+
+.course-list .foot .btn:hover {
+    background: #ffb900;
+    cursor: pointer;
+}
+/* Feedback */
+.feedback {
+    margin-top: 135px;
+    padding: 96px 0;
+    background: #2e2100;
+}
+
+.feedback .feedback-items {
+    display: flex;
+}
+
+.feedback .info img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.feedback-items .info .title {
+    color: #f7f7f7;
+    font-family: Sen;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.42; /* 141.667% */
+}
+
+.feedback-items .info .desc {
+    margin-top: 4px;
+    color: #bfbcb2;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    line-height: 1.86; /* 185.714% */
+}
+
+.feedback-items .dots {
+    display: flex;
+    margin-top: 28px;
+}
+
+.feedback-items .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+    margin-right: 6px;
+}
+
+.feedback-items .dot.active {
+    background: #ffb900;
+}
+
+.feedback-items .content {
+    width: 66%;
+    margin-left: auto;
+}
+
+.feedback-items blockquote {
+    margin-left: 30px;
+    color: #fff;
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.53; /* 153.846% */
+}
+
+/* features */
+.features {
+    margin-top: 135px;
+    padding: 65px 0;
+}
+
+.features .main-content {
+    display: flex;
+}
+
+.features .images {
+    display: flex;
+    gap: 0 30px;
+}
+
+.features .body {
+     display: flex;
+   justify-content: space-between;
+}
+
+.features .body img {
+    object-fit: cover;
+    width: 270px;
+    height: 404px;
+    border-radius: 16px;
+}
+
+.features .body .lower {
+    margin-top: 34px;
+}
+
+.features .content {
+   
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.features .content .title {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.76px;
+    margin-top: 58px;
+}
+
+.features .content .desc {
+    line-height: 1.75; /* 175% */
+    margin-top: 16px;
+}
+
+.features .content .btn {
+    width: 137px;
+    background: var(--primary-color);
+    margin-top: 32px;
+}
+
+.features-2nd {
+    margin-top: 70px;
+}
+
+.features-2nd .body {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.features-2nd .content {
+    width: 49%;
+}
+
+.features-2nd .images img {
+    width: 470px;
+    height: 440px;
 }
